@@ -43,4 +43,4 @@ Content-Type: application/json;charset=utf-8
 
 ¿Por qué podría necesitar un Identificador previo al timbrado (idd)?
 
-El idd es opcional, pero en algunos escenarios de programación puede resultar útil contar con un Identificador conocido antes de mandar a timbrar que podría servir para recuperar el CFDI de la plataforma de Induxsoft incluso si perdió la conexión justo antes de recibir la respuesta del servicio Web pero despues de haber hecho el envío de la solicitud.
+El idd es opcional, pero en algunos escenarios de programación puede resultar útil contar con un Identificador conocido antes de mandar a timbrar que serviría para recuperar el CFDI de la plataforma de Induxsoft incluso si perdió la conexión justo antes de recibir la respuesta del servicio Web pero despues de haber hecho el envío de la solicitud.
