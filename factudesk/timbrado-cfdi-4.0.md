@@ -36,5 +36,5 @@ Content-Type: application/json;charset=utf-8
 }
 ```
 
-* Si en la solicitud se estableció nb64=true, el campo ```xml``` será una cadena JSON del Xml del CFDI, en caso contrario será la representación en base 64 del byte array del Xml UTF-8 (incluyendo el BOM).
+* Si en la solicitud se estableció ```nb64=true```, el campo ```xml``` será una cadena JSON del Xml del CFDI, en caso contrario será la representación en base 64 del byte array del Xml UTF-8 (incluyendo el BOM).
 * Si no se indicó un ```idd``` en la solicitud, este campo contendrá el UUID del CFDI timbrado.
