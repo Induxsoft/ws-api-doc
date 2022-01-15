@@ -30,9 +30,11 @@ Content-Type: application/json;charset=utf-8
 	"data":
   {
     "uuid":"UUID del Timbre Fiscal Digital (TFD)",
-    "xml":"Base 64 del byte array del Xml UTF-8 del CFDI incluyendo el complemento del TFD"
+    "xml":"Base 64 del byte array del Xml UTF-8 del CFDI incluyendo el complemento del TFD",
+    "idd":"Identificador previo al timbrado (si se proporcionó en la solicitud) o en caso contrario el UUID"
   }
 }
 ```
 
-Si en la solicitud se estableció nb64=true, la respuesta será una cadena JSON del Xml del CFDI, en caso contrario será la representación en base 64 del byte array del Xml UTF-8 (incluyendo el BOM).
+* Si en la solicitud se estableció nb64=true, el campo ```xml``` será una cadena JSON del Xml del CFDI, en caso contrario será la representación en base 64 del byte array del Xml UTF-8 (incluyendo el BOM).
+* Si no se indicó un ```idd``` en la solicitud, este campo contendrá el UUID del CFDI timbrado.
