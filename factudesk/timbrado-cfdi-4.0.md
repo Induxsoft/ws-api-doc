@@ -5,6 +5,8 @@ El servicio de timbrado requiere autenticación a través de una Cuenta de Timbr
 Consideraciones:
 * Las CTI estándar no tienen caducidad (vigencia), pero están limitadas por su saldo de timbres pre-pagados
 
+End point: https://factudesk.api.induxsoft.net/cfdi/timbrado/4.0/
+
 Solicitud
 ```
 Method: POST
