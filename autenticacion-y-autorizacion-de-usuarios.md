@@ -85,6 +85,10 @@ Content-Type: application/json;charset=utf-8
 ## Autorización ##
 Informa si un determinado usuario (identificado por  usuario/contraseña o id de sesión) está vinculado a una cuenta de cliente (organización) y si tiene derecho a utilizar un determinado servicio de la plataforma.
 
+Requisitos:
+* [Lista de identificadores de servicio](identificadores-de-servicio.md)
+* Cuenta de cliente, es el Número de Identificación de Cliente (NIC) de Induxsoft, generalmente una secuencia de 6 u 8 dígitos
+
 End point: https://api.induxsoft.net/auth/management/
 
 ### Autorización con usuario y contraseña ###
