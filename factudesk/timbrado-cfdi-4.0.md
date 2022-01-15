@@ -24,7 +24,7 @@ Content-Type: application/json;charset=utf-8
 * xml - Es una cadena que contiene la representación codificada en base 64 del byte array del Xml UTF-8 de un CFDI, a menos que nb64=true
 * nb64 - Es un parámetro opcional booleano que si se establece en ```true``` indica que el Xml del CFDI está codificado como una cadena JSON y la respuesta (el CFDI timbrado) también deberá devolverse en esa forma.
 
-Respues exitosa
+Respuesta exitosa
 ```
 Content-Type: application/json;charset=utf-8
 {
