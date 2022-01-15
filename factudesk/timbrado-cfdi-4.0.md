@@ -37,4 +37,8 @@ Content-Type: application/json;charset=utf-8
 ```
 
 * Si en la solicitud se estableció ```nb64=true```, el campo ```xml``` será una cadena JSON del Xml del CFDI, en caso contrario será la representación en base 64 del byte array del Xml UTF-8 (incluyendo el BOM).
-* Si no se indicó un ```idd``` en la solicitud, este campo contendrá el UUID del CFDI timbrado.
+* Si no se indicó un ```idd``` (Identificador previo al timbrado) en la solicitud, este campo contendrá también el UUID del CFDI timbrado.
+
+¿Por qué podría necesitar un Identificador previo al timbrado (idd)?
+
+El idd es opcional, pero en algunos escenarios de programación puede resultar útil contar con un Identificador conocido antes de mandar a timbrar que podría servir para recuperar el CFDI de la plataforma de Induxsoft incluso si perdió la conexión justo antes de recibir la respuesta del servicio Web o está realizando operaciones masivas (procesos por lotes) asíncronos.
