@@ -11,7 +11,7 @@ Respuesta de error
 ```
 Content-Type: application/json;charset=utf-8
 {
-	"success":false
+	"success":false,
 	"message":"Mensaje de error"
 }
 ```
@@ -20,7 +20,7 @@ Respuesta exitosa
 ```
 Content-Type: application/json;charset=utf-8
 {
-	"success":true
+	"success":true,
 	"data":{...}
 }
 ```
