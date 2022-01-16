@@ -2,7 +2,7 @@
 
 Este servicio no requiere autenticación
 
-End point: https://factudesk.api.induxsoft.net/cfdi/subir.dkl
+End point: https://factudesk.api.induxsoft.net/cfdi/subir/
 
 Solicitud
 ```
