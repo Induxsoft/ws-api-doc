@@ -38,41 +38,51 @@ Solicitud GET con usuario y contraseña
 ?uid=id-de-usuario&pwd=contraseña&uuid=uuid-o-idd&res=opc&pln=id-plantilla
 ```
 Opciones para el parámetro res:
-* xmlraw - la respuesta será el byte array del Xml UTF-8 con BOM del CFDI con el encabezado HTTP ```Content-type: application/octet-stream```
-* prnraw - la respuesta será el byte array de la representación impresa (PDF) del CFDI con el encabezado HTTP ```Content-type: application/pdf```
-* zipraw - la respuesta será el byte array del archivo zip que contiene el Xml y la representación impresa con el encabezado HTTP ```Content-type: application/octet-stream```
+* xmllnk - Se obtendrá un enlace temporal al documento Xml del CFDI
+* prnlnk - Se obtendrá un enlace temporal al documento (pdf) de la representación impresa
+* ziplnk - Se obtendrá un enlace a un archivo zip que contiene tanto el xml como su representación impresa
 * xmljsn - la respuesta será un objeto JSON con el Xml del CFDI como cadena JSON
-* xmlb64 - (Valor predeterminado cuando no se indique el parámetro) la respuesta será un objeto JSON con el Xml del CFDI codificado como base 64 (Xml UTF-8 con BOM)
-* prnb64 - la respuesta será un objeto JSON con el byte array de la representación impresa en base 64
-* zipjsn - la respuesta será un objeto JSON con el byte array de un archivo zip con el Xml y la representación impresa en base64
+* xmlb64 - (Valor predeterminado) la respuesta será un objeto JSON con el Xml del CFDI codificado como base 64 (Xml UTF-8 con BOM)
+* xmltxt - El Xml del CFDI con encabezado HTTP ```Content-type: text/xml```
+* xmlraw - El Xml del CFDI con encabezado HTTP ```Content-type: application/octet-stream```
+* prnraw - El contenido de la representación impresa con encabezado HTTP ```Content-type: application/octet-stream```
+* prnpdf - El contenido de la representación impresa con encabezado HTTP ```Content-type: application/pdf```
+* zipraw - El contenido de un archivo Zip con el Xml del CFDI y su representación impresa con encabezado HTTP ```Content-type: application/octet-stream```
 
 Parámetro pln
 Es una cadena que identifica una plantilla de generación de representación impresa previamente alojada y disponible en la plataforma, si se omite se aplicarán las reglas configuradas en el emisor de FactuDesk Web.
 
 ### Respuesta exitosa ###
-La respuesta de éxito dependerá del parámetro res de la solicitud.
 
-Para la opción jsn será en la forma:
-
+Para las opciones de resultado xmljsn y xmlb64:
 ```
 Content-Type: application/json;charset=utf-8
 {
   "success":true,
-  "data": "Cadena con el Xml del CFDI (sintaxis válida de JSON)"
+  "data": 
+  {
+  	"content":"El Xml del CFDI como una cadena o un byte array base 64"
+  }
 }
 ```
-Para la opción jb64 será en la forma:
 
+Para las opciones de resultado xmllnk, prnlnk y ziplnk:
 ```
 Content-Type: application/json;charset=utf-8
 {
   "success":true,
-  "data": "Cadena codificada en base64 del byte array del Xml UTF-8 incluyendo BOM"
+  "data": 
+  {
+  	"link":"Enlace temporal al archivo a descargar"
+  }
 }
 ```
+
+Para las opciones de resultado xmltxt, xmlraw, prnraw, prnpdf y zipraw:
+Se inicia la descarga del contenido directamente (generalmente el navegador descargará o abrirá el archivo).
 
 ### Respuesta error ###
-Para las opciones jsn y jb64, la respuesta de error será igualmente el objeto JSON de la forma estándar:
+Para las opciones xmljsn, xmlb64, xmllnk, prnlnk y ziplnk la respuesta de error será igualmente un objeto JSON de la forma estándar:
 ```
 Content-Type: application/json;charset=utf-8
 {
@@ -80,6 +90,5 @@ Content-Type: application/json;charset=utf-8
 	"message":"Mensaje de error"
 }
 ```
-
-Para las opciones raw y xml, la respuesta de error será el contenido HTML de un mensaje descriptivo para el usuario.
+Para las opciones xmltxt, xmlraw, prnraw, prnpdf y zipraw en caso de error se devolverá una página Html con el mensaje correspondiente al usuario.
 
