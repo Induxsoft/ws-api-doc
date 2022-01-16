@@ -14,7 +14,7 @@
 | Cancelación CR 1.0/2.0 | https://factudesk.api.induxsoft.net/cr/cancelacion/ |
 | Carga de CR | https://factudesk.api.induxsoft.net/cr/subir/ |
 | Descarga CR | https://factudesk.api.induxsoft.net/cr/descargar/ |
-| Alojamiento de certificado | https://factudesk.api.induxsoft.net/certificados/subir/ |
+| Alojamiento o eliminación de certificado | https://factudesk.api.induxsoft.net/certificados/ |
 | Envío por correo de CFDI/CR | https://factudesk.api.induxsoft.net/enviar/ |
 | Aceptar/rechazar solicitud de cancelación | https://factudesk.api.induxsoft.net/respuesta-cancelacion/ |
 
