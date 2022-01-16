@@ -5,10 +5,10 @@
 | Servicio | End point |
 |----------|-----------|
 | Sellado y timbrado CFDI 4.0 | https://factudesk.api.induxsoft.net/cfdi/sellado/ |
-| Timbrado CFDI 4.0 | https://factudesk.api.induxsoft.net/cfdi/timbrado/ |
-| Cancelación CFDI 3.3 / 4.0 | https://factudesk.api.induxsoft.net/cfdi/cancelacion/ |
-| Carga de CFDI | https://factudesk.api.induxsoft.net/cfdi/subir/ |
-| Descarga de CFDI | https://factudesk.api.induxsoft.net/cfdi/descargar/ |
+| [Timbrado CFDI 4.0](timbrado-cfdi-4.0.md) | https://factudesk.api.induxsoft.net/cfdi/timbrado/ |
+| [Cancelación CFDI 3.3 / 4.0](cancelacion-cfdi.md) | https://factudesk.api.induxsoft.net/cfdi/cancelacion/ |
+| [Carga de CFDI](subir-cfdi.md) | https://factudesk.api.induxsoft.net/cfdi/subir/ |
+| [Descarga de CFDI](descargar-cfdi.md) | https://factudesk.api.induxsoft.net/cfdi/descargar/ |
 | Sellado y timbrado CR 2.0 | https://factudesk.api.induxsoft.net/cr/sellado/ |
 | Timbrado CR 2.0 | https://factudesk.api.induxsoft.net/cr/timbrado/ |
 | Cancelación CR 1.0/2.0 | https://factudesk.api.induxsoft.net/cr/cancelacion/ |
