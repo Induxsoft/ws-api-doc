@@ -2,7 +2,7 @@
 
 El servicio de cancelación requiere autenticación por usuario, por lo que deberá presentar el par de credenciales (usuario y contraseña) o un Id de sesión válida.
 
-End point: https://factudesk.api.induxsoft.net/cfdi/cancelacion/4.0/
+End point: https://factudesk.api.induxsoft.net/cfdi/cancelacion/
 
 Solicitud de cancelación con usuario y contraseña
 ```
