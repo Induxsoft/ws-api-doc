@@ -27,7 +27,7 @@
 | Cancelación masiva de CFDI/CR | https://factudesk.api.induxsoft.net/op-masivas/cancelar/ |
 | Envío masivo por correo | https://factudesk.api.induxsoft.net/op-masivas/enviar/ |
 | Estado de operación masiva | https://factudesk.api.induxsoft.net/op-masivas/estado/
-| Cargar arhivo de trabajo | https://workfiles.api.induxsoft.net/op-masivas/subir-archivo/
+| Cargar arhivo de trabajo | https://subir-archivo.factudesk.induxsoft.net/
 | Solicitar acción con archivo | https://factudesk.api.induxsoft.net/op-masivas/ejecutar/
 
 ## Consultas ##
