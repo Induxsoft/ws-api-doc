@@ -31,11 +31,11 @@ Content-Type: application/json;charset=utf-8
 ```
 Solicitud GET con Id de sesión
 ```
-?uid=id-de-usuario&pwd=contraseña&uuid=uuid-o-idd&res=opc&pln=id-plantilla
+https://factudesk.api.induxsoft.net/cfdi/descargar.dkl?uid=id-de-usuario&pwd=contraseña&uuid=uuid-o-idd&res=opc&pln=id-plantilla
 ```
 Solicitud GET con usuario y contraseña
 ```
-?uid=id-de-usuario&pwd=contraseña&uuid=uuid-o-idd&res=opc&pln=id-plantilla
+https://factudesk.api.induxsoft.net/cfdi/descargar.dkl?uid=id-de-usuario&pwd=contraseña&uuid=uuid-o-idd&res=opc&pln=id-plantilla
 ```
 Opciones para el parámetro res:
 * xmllnk - Se obtendrá un enlace temporal al documento Xml del CFDI
