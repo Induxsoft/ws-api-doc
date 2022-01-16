@@ -1,4 +1,4 @@
-# Cancelación de CFDI 4.0 #
+# Cancelación de CFDI 3.3 y 4.0 #
 
 El servicio de cancelación requiere autenticación por usuario, por lo que deberá presentar el par de credenciales (usuario y contraseña) o un Id de sesión válida.
 
