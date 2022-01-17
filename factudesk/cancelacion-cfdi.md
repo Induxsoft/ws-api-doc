@@ -17,7 +17,7 @@ Content-Type: application/json;charset=utf-8
   "frel":"(Opcional) UUID del CFDI relacionado, en caso de que el motivo sea'01'"
 }
 ```
-* tipo - Una cadena que indica si el uuid corresponde a un CFDI o una constancia de retenciones (CR), si se omite se asume que se trata de un CFDI 
+* tipo - Una cadena que indica si el uuid corresponde a un CFDI o una constancia de retenciones (CR), si se omite se asume que se trata de un CFDI. Los valores posibles son: ```cfdi```y ```cr```
 * motivo -Una cadena con la clave el motivo de cancelación 01, 02, 03 o 04 según el catálogo del SAT
 
 Solicitud de cancelación con Identificador de sesión
