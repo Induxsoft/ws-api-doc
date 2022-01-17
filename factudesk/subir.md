@@ -1,4 +1,4 @@
-# Subir CFDI #
+# Subir CFDI o CR #
 
 Este servicio no requiere autenticación
 
