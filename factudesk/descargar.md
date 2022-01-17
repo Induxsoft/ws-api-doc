@@ -4,7 +4,7 @@ Obtiene el Xml,el Xml y la representación impresa o únicamente la representaci
 
 Este servicio requiere autenticación por usuario, por lo que deberá presentar el par de credenciales (usuario/contraseña) o un Id de sesión válido.
 
-End point: https://factudesk.api.induxsoft.net/cfdi/descargar/
+End point: https://factudesk.api.induxsoft.net/comprobantes/descargar/
 
 Solicitud POST con usuario y contraseña
 ```
