@@ -4,19 +4,14 @@
 
 | Servicio | End point |
 |----------|-----------|
-| Sellado y timbrado CFDI 4.0 | https://factudesk.api.induxsoft.net/cfdi/sellado/ |
-| [Timbrado CFDI 4.0](timbrado-cfdi-4.0.md) | https://factudesk.api.induxsoft.net/cfdi/timbrado/ |
-| [Cancelación CFDI 3.3 / 4.0](cancelacion-cfdi.md) | https://factudesk.api.induxsoft.net/cfdi/cancelacion/ |
-| [Carga de CFDI](subir-cfdi.md) | https://factudesk.api.induxsoft.net/cfdi/subir/ |
-| [Descarga de CFDI](descargar-cfdi.md) | https://factudesk.api.induxsoft.net/cfdi/descargar/ |
-| Sellado y timbrado CR 2.0 | https://factudesk.api.induxsoft.net/cr/sellado/ |
-| Timbrado CR 2.0 | https://factudesk.api.induxsoft.net/cr/timbrado/ |
-| Cancelación CR 1.0/2.0 | https://factudesk.api.induxsoft.net/cr/cancelacion/ |
-| Carga de CR | https://factudesk.api.induxsoft.net/cr/subir/ |
-| Descarga CR | https://factudesk.api.induxsoft.net/cr/descargar/ |
-| Alojamiento o eliminación de certificado | https://factudesk.api.induxsoft.net/certificados/ |
-| Envío por correo de CFDI/CR | https://factudesk.api.induxsoft.net/enviar/ |
-| Aceptar/rechazar solicitud de cancelación | https://factudesk.api.induxsoft.net/respuesta-cancelacion/ |
+| Sellado y timbrado CFDI 4.0 y CR 2.0 | https://factudesk.api.induxsoft.net/comprobantes/sellar-y-timbrar/ |
+| [Timbrado CFDI 4.0 y CR 2.0](timbrar.md) | https://factudesk.api.induxsoft.net/comprobantes/timbrar/ |
+| [Carga de CFDI o CR](subir.md) | https://factudesk.api.induxsoft.net/comprobantes/subir/ |
+| [Descarga de CFDI o CR](descargar.md) | https://factudesk.api.induxsoft.net/comprobantes/descargar/ |
+| Envío por correo de CFDI/CR | https://factudesk.api.induxsoft.net/comprobantes/enviar/ |
+| [Cancelación CR 1.0/2.0 y CFDI 3.3/4.0](cancelar.md) | https://factudesk.api.induxsoft.net/comprobantes/cancelaciones/solicitar/ |
+| Aceptar/rechazar solicitud de cancelación | https://factudesk.api.induxsoft.net/comprobantes/cancelaciones/responder/ |
+| Alojamiento o eliminación de certificado | https://factudesk.api.induxsoft.net/certificados/administrar/ |
 
 ## Operaciones masivas ##
 
