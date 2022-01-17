@@ -1,6 +1,6 @@
-# Descargar CFDI #
+# Descargar CFDI o CR #
 
-Obtiene el Xml,el Xml y la representación impresa o únicamente la representación impresa de un CFDI disponible en la plataforma de Induxsoft.
+Obtiene el Xml,el Xml y la representación impresa o únicamente la representación impresa de un CFDI o CR disponible en la plataforma de Induxsoft.
 
 Este servicio requiere autenticación por usuario, por lo que deberá presentar el par de credenciales (usuario/contraseña) o un Id de sesión válido.
 
@@ -14,6 +14,7 @@ Content-Type: application/json;charset=utf-8
   "uid":"Id de usuario (correo o teléfono móvil)",
   "pwd":"Contraseña del usuario",
   "uuid":"UUID del CFDI o Idd",
+  "tpo":"cfdi/cr (opcional)",
   "res":"(Opcional) tipo de resultado deseado",
   "pln":"(Opcional) Identificador de plantilla de representación impresa"
 }
@@ -25,18 +26,21 @@ Content-Type: application/json;charset=utf-8
 {
   "ids":"Id de sesión válido",
   "doc":"UUID del CFDI o Idd",
+  "tpo":"cfdi/cr (opcional)",
   "res":"(Opcional) tipo de resultado deseado",
   "pln":"(Opcional) Identificador de plantilla de representación impresa"
 }
 ```
 Solicitud GET con Id de sesión
 ```
-https://factudesk.api.induxsoft.net/cfdi/descargar.dkl?uid=id-de-usuario&pwd=contraseña&uuid=uuid-o-idd&res=opc&pln=id-plantilla
+https://factudesk.api.induxsoft.net/cfdi/descargar.dkl?uid=id-de-usuario&pwd=contraseña&uuid=uuid-o-idd&tpo=cfdi/cr&res=opc&pln=id-plantilla
 ```
 Solicitud GET con usuario y contraseña
 ```
-https://factudesk.api.induxsoft.net/cfdi/descargar.dkl?uid=id-de-usuario&pwd=contraseña&uuid=uuid-o-idd&res=opc&pln=id-plantilla
+https://factudesk.api.induxsoft.net/cfdi/descargar.dkl?uid=id-de-usuario&pwd=contraseña&uuid=uuid-o-idd&tpo=cfdi/cr&res=opc&pln=id-plantilla
 ```
+El parámetro ```tpo``` indica el tipo de documento solicitado: cfdi-CFDI o cr-Constancia de retención, si se omite, se asume el valor cfdi como predeterminado.
+
 Opciones para el parámetro res:
 * xmllnk - Se obtendrá un enlace temporal al documento Xml del CFDI
 * prnlnk - Se obtendrá un enlace temporal al documento (pdf) de la representación impresa
