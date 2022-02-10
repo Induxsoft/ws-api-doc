@@ -10,6 +10,7 @@
 | [Descarga de CFDI o CR](descargar.md) | https://factudesk.api.induxsoft.net/comprobantes/descargar/ |
 | [Envío por correo de CFDI/CR](enviar.md) | https://factudesk.api.induxsoft.net/comprobantes/enviar/ |
 | [Cancelación CR 1.0/2.0 y CFDI 3.3/4.0](cancelar.md) | https://factudesk.api.induxsoft.net/comprobantes/cancelaciones/solicitar/ |
+| [Obtener acuse de cancelación](acuse-cancelacion.md) | https://factudesk.api.induxsoft.net/comprobantes/cancelaciones/acuses/ |
 | Aceptar/rechazar solicitud de cancelación | https://factudesk.api.induxsoft.net/comprobantes/cancelaciones/responder/ |
 | Alojamiento o eliminación de certificado | https://factudesk.api.induxsoft.net/certificados/administrar/ |
 
