@@ -13,7 +13,7 @@ Content-Type: application/json;charset=utf-8
 {
   "uid":"Id de usuario (correo o teléfono móvil)",
   "pwd":"Contraseña del usuario",
-  "uuid":"UUID del CFDI o Idd",
+  "doc":"UUID del CFDI o Idd",
   "tpo":"cfdi/cr (opcional)",
   "res":"(Opcional) tipo de resultado deseado",
   "pln":"(Opcional) Identificador de plantilla de representación impresa"
@@ -33,11 +33,11 @@ Content-Type: application/json;charset=utf-8
 ```
 Solicitud GET con Id de sesión
 ```
-https://factudesk.api.induxsoft.net/cfdi/descargar.dkl?uid=id-de-usuario&pwd=contraseña&uuid=uuid-o-idd&tpo=cfdi/cr&res=opc&pln=id-plantilla
+https://factudesk.api.induxsoft.net/comprobantes/descargar/?uid=id-de-usuario&pwd=contraseña&uuid=uuid-o-idd&tpo=cfdi/cr&res=opc&pln=id-plantilla
 ```
 Solicitud GET con usuario y contraseña
 ```
-https://factudesk.api.induxsoft.net/cfdi/descargar.dkl?uid=id-de-usuario&pwd=contraseña&uuid=uuid-o-idd&tpo=cfdi/cr&res=opc&pln=id-plantilla
+https://factudesk.api.induxsoft.net/comprobantes/descargar/?uid=id-de-usuario&pwd=contraseña&uuid=uuid-o-idd&tpo=cfdi/cr&res=opc&pln=id-plantilla
 ```
 El parámetro ```doc``` será el UUID de un CFDI o una constancia de retención, si se requiere más de 1, deberán delimitarse por comas. Tratándose de descarga de más de un comprobante, únicamente se admitirán en ```res``` los valores: ziplnk y zipraw, siendo predeterminado ziplnk. El máximo de comprobantes a devolver será de 50.
 
