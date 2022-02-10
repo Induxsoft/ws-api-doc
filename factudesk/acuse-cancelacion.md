@@ -1,8 +1,12 @@
 # Solicitar acuses de cancelación #
 
-El serviciorequiere autenticación por usuario, por lo que deberá presentar el par de credenciales (usuario y contraseña) o un Id de sesión válida.
+El servicio requiere autenticación por usuario, por lo que deberá presentar el par de credenciales (usuario y contraseña) o un Id de sesión válida.
 
 End point: https://factudesk.api.induxsoft.net/comprobantes/cancelaciones/acuses/
+
+* tipo - Una cadena que indica si el uuid corresponde a un CFDI o una constancia de retenciones (CR), si se omite se asume que se trata de un CFDI. Los valores posibles son: ```cfdi```y ```cr```
+
+Si se requiere más de un acuse, los UUIDs deberán delimiarse por comas.
 
 Solicitud de acuses con usuario y contraseña
 ```
@@ -15,9 +19,6 @@ Content-Type: application/json;charset=utf-8
   "tipo":"(opcional) cfdi/cr"
 }
 ```
-* tipo - Una cadena que indica si el uuid corresponde a un CFDI o una constancia de retenciones (CR), si se omite se asume que se trata de un CFDI. Los valores posibles son: ```cfdi```y ```cr```
-
-Si se requiere más de un acuse, los UUIDs deberán delimiarse por comas.
 
 Solicitud de acuses con Identificador de sesión
 ```
