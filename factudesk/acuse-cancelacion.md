@@ -6,7 +6,7 @@ End point: https://factudesk.api.induxsoft.net/comprobantes/cancelaciones/acuses
 
 * tipo - Una cadena que indica si el uuid corresponde a un CFDI o una constancia de retenciones (CR), si se omite se asume que se trata de un CFDI. Los valores posibles son: ```cfdi```y ```cr```
 
-Si se requiere más de un acuse, los UUIDs deberán delimiarse por comas.
+Si se requiere más de un acuse, los UUIDs deberán delimiarse por comas (máximo 50).
 
 Solicitud de acuses con usuario y contraseña
 ```
