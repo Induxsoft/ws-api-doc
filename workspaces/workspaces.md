@@ -81,8 +81,9 @@ Content-Type: application/json;charset=utf-8
   "operation":"update",
   "owner":"NIC de la organización, si se omite se asume al usuario como propietario",
   "workspace":{
-    "id":"Id del especio de trabajo a actualizar",
-    "name":"Nombre del espacio de trabajo",
+    "id":"Id del especio de trabajo a actualizar (requerido)",
+    "name":"(opcional) Nombre del espacio de trabajo",
+    "admins":"(opcional) Id de un equipo de usuarios con permisos de administración",
     ... Todos los datos a actualizar ...
   }
 }
