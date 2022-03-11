@@ -6,7 +6,7 @@ Consideraciones:
 * Las CTI estándar no tienen caducidad (vigencia), pero están limitadas por su saldo de timbres pre-pagados
 * Debe haber por lo menos un certificado alojado en la plataforma asociado al emisor
 
-End point: https://factudesk.api.induxsoft.net/comprobantes/sellar-timbrar/
+End point: https://factudesk.api.induxsoft.net/comprobantes/sellar-y-timbrar/
 
 Solicitud
 ```
