@@ -12,7 +12,7 @@
 | [Cancelación CR 1.0/2.0 y CFDI 3.3/4.0](cancelar.md) | https://factudesk.api.induxsoft.net/comprobantes/cancelaciones/solicitar/ |
 | [Obtener acuse de cancelación](acuse-cancelacion.md) | https://factudesk.api.induxsoft.net/comprobantes/cancelaciones/acuses/ |
 | Aceptar/rechazar solicitud de cancelación | https://factudesk.api.induxsoft.net/comprobantes/cancelaciones/responder/ |
-| Alojamiento o eliminación de certificado | https://factudesk.api.induxsoft.net/certificados/administrar/ |
+| [Alojamiento o eliminación de certificado](alojar-remover-cer.md) | https://factudesk.api.induxsoft.net/certificados/administrar/ |
 
 ## Operaciones masivas ##
 
@@ -29,7 +29,7 @@
 ## Consultas ##
 | Servicio | End point |
 |----------|-----------|
-| Listado de certificados | https://factudesk.api.induxsoft.net/consultar/certificados/
+| [Listado de certificados](consultar-certificados.md) | https://factudesk.api.induxsoft.net/consultar/certificados/
 | Listado de CFDIs | https://factudesk.api.induxsoft.net/consultar/cfdi/
 | Listado de CRs | https://factudesk.api.induxsoft.net/consultar/cr/
 | Listado de clientes | https://factudesk.api.induxsoft.net/consultar/clientes/
