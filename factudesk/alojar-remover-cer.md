@@ -36,6 +36,9 @@ Content-Type: application/json;charset=utf-8
 * La contraseña de la clave privada no se validará por lo que podría dar lugar a que el certificado alojado no pueda usarse
 * Si la contraseña o la llave privada no son correctas, deberá volver a invocar el servicio
 
+### Posibles errores
+* Error de autenticación de usuario o validez de id de sesión
+
 ### Respuesta exitosa ###
 
 ```
