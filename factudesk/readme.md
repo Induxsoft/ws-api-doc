@@ -4,7 +4,7 @@
 
 | Servicio | End point |
 |----------|-----------|
-| Sellado y timbrado CFDI 4.0 y CR 2.0 | https://factudesk.api.induxsoft.net/comprobantes/sellar-y-timbrar/ |
+| [Sellado y timbrado CFDI 4.0 y CR 2.0](sellar-y-timbrar.md) | https://factudesk.api.induxsoft.net/comprobantes/sellar-y-timbrar/ |
 | [Timbrado CFDI 4.0 y CR 2.0](timbrar.md) | https://factudesk.api.induxsoft.net/comprobantes/timbrar/ |
 | [Carga de CFDI o CR](subir.md) | https://factudesk.api.induxsoft.net/comprobantes/subir/ |
 | [Descarga de CFDI o CR](descargar.md) | https://factudesk.api.induxsoft.net/comprobantes/descargar/ |
