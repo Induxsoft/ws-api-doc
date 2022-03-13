@@ -14,9 +14,6 @@ https://api.induxsoft.net/workspaces/
 
 Todos los servicios de administración se utilizan a través del mismo end-point
 
-### Observaciones
-* En las colicitudes que requieren los campos 'workspace', 'team' o 'role', puede omitirlos y en su lugar utilizar únicamente un campo denominado 'location' en la forma de una ruta: 'workspace/team/role'
-
 ## Crear objetos
 
 ### Espacio de trabajo
@@ -84,7 +81,6 @@ Content-Type: application/json;charset=utf-8
 }
 ```
 
-
 ### Rol
 
 Solicitud
@@ -118,6 +114,9 @@ Content-Type: application/json;charset=utf-8
   }
 }
 ```
+### Observaciones:
+* En las solicitudes que requieren los campos 'workspace', 'team' o 'role', puede omitirlos y en su lugar utilizar únicamente un campo denominado 'location' en la forma de una ruta: 'workspace/team/role'
+
 
 ## Obtener (leer) objetos
 
