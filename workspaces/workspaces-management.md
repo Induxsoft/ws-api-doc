@@ -197,3 +197,73 @@ Content-Type: application/json;charset=utf-8
   "data": null
 }
 ```
+## Listar objetos
+
+### Listar espacios de trabajo (los que el usuario solicitante puede administrar)
+Solicitud
+```
+Method: POST
+Content-Type: application/json;charset=utf-8
+{
+  "ids":"Identificador de sesión válida (token)",
+  "operation":"list",
+  "owner":"NIC de la organización, si se omite se asume al usuario como propietario (omitible)"
+}
+```
+
+Respuesta exitosa
+
+```
+Content-Type: application/json;charset=utf-8
+{
+  "success":true,
+  "data":[{..datos del espacio de trabajo 1},..]
+}
+```
+
+### Listar equipos
+Solicitud
+```
+Method: POST
+Content-Type: application/json;charset=utf-8
+{
+  "ids":"Identificador de sesión válida (token)",
+  "operation":"list",
+  "owner":"NIC de la organización, si se omite se asume al usuario como propietario (omitible)",
+  "workspace":"Id del espacio de trabajo"
+}
+```
+
+Respuesta exitosa
+
+```
+Content-Type: application/json;charset=utf-8
+{
+  "success":true,
+  "data":[{..datos del equipo 1},..]
+}
+```
+
+### Listar roles de un equipo
+Solicitud
+```
+Method: POST
+Content-Type: application/json;charset=utf-8
+{
+  "ids":"Identificador de sesión válida (token)",
+  "operation":"list",
+  "owner":"NIC de la organización, si se omite se asume al usuario como propietario (omitible)",
+  "workspace":"Id del espacio de trabajo",
+  "team":"Id del equipo"
+}
+```
+
+Respuesta exitosa
+
+```
+Content-Type: application/json;charset=utf-8
+{
+  "success":true,
+  "data":[{..datos del rol 1},..]
+}
+```
