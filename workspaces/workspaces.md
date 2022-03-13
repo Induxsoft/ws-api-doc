@@ -4,12 +4,22 @@ Los espacios de trabajo son una forma de organizar y coordinar equipos de trabaj
 
 La propietariedad de un espacio de trabajo corresponde a un usuario (perfil) o a una organización (NIC).
 
-En el caso de las organizaciones, pueden crear y administrar espacios de trabajo únicamente los usuarios "administradores" del NIC.
+En el caso de las organizaciones, pueden crear y administrar espacios de trabajo únicamente los usuarios vinculados al panel de control del NIC.
 
-En todos los casos, cada espacio de trabajo puede configurar un equipo (grupo de usuarios) con permisos de administra.
+En todos los casos, cada espacio de trabajo puede configurar un equipo (grupo de usuarios) con permisos de administración.
 
-## Crear un espacio de trabajo
-End point: https://api.induxsoft.net/workspaces/
+## End point
+
+https://api.induxsoft.net/workspaces/
+
+Todos los servicios de administración se utilizan a través del mismo end-point
+
+### Observaciones
+* En las colicitudes que requieren los campos 'workspace', 'team' o 'role', puede omitirlos y en su lugar utilizar únicamente un campo denominado 'location' en la forma de una ruta: 'workspace/team/role'
+
+## Crear objetos
+
+### Espacio de trabajo
 
 Solicitud
 ```
@@ -18,10 +28,12 @@ Content-Type: application/json;charset=utf-8
 {
   "ids":"Identificador de sesión válida (token)",
   "operation":"create",
-  "owner":"NIC de la organización, si se omite se asume al usuario como propietario",
-  "workspace":{
-    "name":"Nombre del espacio de trabajo"
-  }
+  "owner":"NIC de la organización, si se omite se asume al usuario como propietario (omitible)",
+  "data":
+    {
+      "name":"Nombre del nuevo espacio de trabajo",
+      ...Campos adicionales que se desee incluir ...
+    }
 }
 ```
 
@@ -39,8 +51,75 @@ Content-Type: application/json;charset=utf-8
 }
 ```
 
-## Obtener los datos de un espacio de trabajo
-End point: https://api.induxsoft.net/workspaces/
+### Equipo
+
+Solicitud
+```
+Method: POST
+Content-Type: application/json;charset=utf-8
+{
+  "ids":"Identificador de sesión válida (token)",
+  "operation":"create",
+  "owner":"NIC de la organización, si se omite se asume al usuario como propietario (omitible)",
+  "workspace":"id del espacio de trabajo al que pertencerá el equipo",
+  "data":
+    {
+      "name":"Nombre del nuevo equipo",
+      ...Campos adicionales que se desee incluir ...
+    }
+}
+```
+
+Respuesta exitosa
+
+```
+Content-Type: application/json;charset=utf-8
+{
+  "success":true,
+  "data":
+  {
+    "id":"Identificador del nuevo equipo",
+    ... Todos los datos disponibles del equipo ...
+  }
+}
+```
+
+
+### Rol
+
+Solicitud
+```
+Method: POST
+Content-Type: application/json;charset=utf-8
+{
+  "ids":"Identificador de sesión válida (token)",
+  "operation":"create",
+  "owner":"NIC de la organización, si se omite se asume al usuario como propietario (omitible)",
+  "workspace":"id del espacio de trabajo al que pertencerá el rol",
+  "team":"id del equipo al que pertenecerá el rol",
+  "data":
+    {
+      "name":"Nombre del nuevo rol",
+      ...Campos adicionales que se desee incluir ...
+    }
+}
+```
+
+Respuesta exitosa
+
+```
+Content-Type: application/json;charset=utf-8
+{
+  "success":true,
+  "data":
+  {
+    "id":"Identificador del nuevo equipo",
+    ... Todos los datos disponibles del rol ...
+  }
+}
+```
+
+## Obtener (leer) objetos
 
 Solicitud
 ```
@@ -49,9 +128,8 @@ Content-Type: application/json;charset=utf-8
 {
   "ids":"Identificador de sesión válida (token)",
   "operation":"read",
-  "owner":"NIC de la organización, si se omite se asume al usuario como propietario",
-  "workspace":"Id del especio de trabajo a actualizar"
-  }
+  "owner":"NIC de la organización, si se omite se asume al usuario como propietario (omitible)",
+  "id":"Id del espacio de trabajo, equipo o rol cuyos datos requiere obtener"
 }
 ```
 
@@ -64,13 +142,12 @@ Content-Type: application/json;charset=utf-8
   "data":
   {
     "id":"Identificador del nuevo espacio de trabajo",
-    ... Todos los datos disponibles del espacio de trabajo ...
+    ... Todos los datos disponibles del objeto solicitado ...
   }
 }
 ```
 
-## Actualizar un espacio de trabajo
-End point: https://api.induxsoft.net/workspaces/
+## Actualizar datos de objetos
 
 Solicitud
 ```
@@ -79,13 +156,9 @@ Content-Type: application/json;charset=utf-8
 {
   "ids":"Identificador de sesión válida (token)",
   "operation":"update",
-  "owner":"NIC de la organización, si se omite se asume al usuario como propietario",
-  "workspace":{
-    "id":"Id del especio de trabajo a actualizar (requerido)",
-    "name":"(opcional) Nombre del espacio de trabajo",
-    "admins":"(opcional) Id de un equipo de usuarios con permisos de administración",
-    ... Todos los datos a actualizar ...
-  }
+  "owner":"NIC de la organización, si se omite se asume al usuario como propietario (omitible)",
+  "id":"Id del espacio de trabajo, equipo o rol cuyos datos requiere actualizar",
+  "data":{...datos a actualizar...}
 }
 ```
 
@@ -98,13 +171,11 @@ Content-Type: application/json;charset=utf-8
   "data":
   {
     "id":"Identificador del nuevo espacio de trabajo",
-    ... Todos los datos disponibles del espacio de trabajo ...
+    ... Todos los datos disponibles del objeto solicitado ...
   }
 }
 ```
-
-## Eliminar un espacio de trabajo
-End point: https://api.induxsoft.net/workspaces/
+## Eliminar objetos
 
 Solicitud
 ```
@@ -113,9 +184,8 @@ Content-Type: application/json;charset=utf-8
 {
   "ids":"Identificador de sesión válida (token)",
   "operation":"delete",
-  "owner":"NIC de la organización, si se omite se asume al usuario como propietario",
-  "workspace":"Id del especio de trabajo a eliminar"
-  }
+  "owner":"NIC de la organización, si se omite se asume al usuario como propietario (omitible)",
+  "id":"Id del espacio de trabajo, equipo o rol a eliminar"
 }
 ```
 
@@ -126,30 +196,5 @@ Content-Type: application/json;charset=utf-8
 {
   "success":true,
   "data": null
-}
-```
-
-## Listar todos los espacios de trabajo
-End point: https://api.induxsoft.net/workspaces/
-
-Solicitud
-```
-Method: POST
-Content-Type: application/json;charset=utf-8
-{
-  "ids":"Identificador de sesión válida (token)",
-  "operation":"list",
-  "owner":"NIC de la organización, si se omite se asume al usuario como propietario"
-  }
-}
-```
-
-Respuesta exitosa
-
-```
-Content-Type: application/json;charset=utf-8
-{
-  "success":true,
-  "data": [{ ...Información de cada espacio de trabajo..},...]
 }
 ```
