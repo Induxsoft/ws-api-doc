@@ -65,7 +65,13 @@ Content-Type: application/json;charset=utf-8
                 "position": null,
                 "agent_name": "Sin asignar",
                 "leadstatus_text": "Recibido",
-                "log": []
+                "log": [
+                    {
+                    "sys_pk": 453857,
+                    "sys_dtcreated": "2022-03-15T14:49:16",
+                    "uname": "Nombre del usuario que puso la nota",
+                    "note": "Texto de la nota"
+                      },...]
             }, ...
     ]
 }
