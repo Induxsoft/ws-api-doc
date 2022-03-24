@@ -32,6 +32,10 @@ Content-Type: application/json;charset=utf-8
 {
     "success": 1,
     "data": [{
+        "key": 999,
+        "caption": "(Por atender)",
+        "final": false
+    }, {
         "key": 0,
         "caption": "Recibido",
         "final": false
@@ -59,4 +63,4 @@ Content-Type: application/json;charset=utf-8
 }
 ```
 
-* El campo 'final' indica si se considera un estado final o no
+* El campo 'final' indica si se considera un estado final o no, los status con clave >=999 implican combinaciones de dos o más status y otras condiciones.
