@@ -1,4 +1,4 @@
-# Buscar tickets
+# Buscar tickets abiertos
 
 Devuelve un array con información de los tickets abiertos de un cliente.
 
