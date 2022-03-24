@@ -43,6 +43,7 @@ Content-Type: application/json;charset=utf-8
     "success": 1,
     "data": {
         "sys_pk": 457363 (clave primaria de la entrada en la bitácora del prospecto),
+        "ticket_id":11381 (Id del nuevo caso),
         "sys_dtcreated": "2022-03-24T15:12:32",
         "uname": "Nombre del isuario que creó el ticket",
         "note": "*** ATT ***\r\nSe ha creado un nuevo caso(#11381) para el cliente: XXXXXXXXXXXXXXXXX"
