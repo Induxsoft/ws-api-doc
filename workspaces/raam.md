@@ -54,7 +54,10 @@ Donde:
 }
 ```
 
-## Autorización
+## Componentes
+<img src="img/raam-components.svg"/>
+
+### Autorización
 La autorización a un usuario para efectuar una determinada operación sobre un recurso depende de:
 
 * El recurso no tiene privilegios definidos explícitamente en su manifiesto para la operación dada
