@@ -10,7 +10,7 @@ El RAAM es un conjunto de conceptos y convenciones para implementar políticas d
 * Equipo. Es una subestructura funcional de un espacio de trabajo a la cual pueden pertenecer usuarios.
 * Rol. Representa un papel (rol) asignado a usuarios dentro de un equipo. 
 
-<svg src="img/rel-elementos.svg"/>
+<img src="img/rel-elementos.svg"/>
 
 * Operación. Es una acción atómica sobre un recurso.
 * Privilegio. Es el derecho a realizar una operación sobre un recurso.
