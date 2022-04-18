@@ -20,7 +20,32 @@ El RAAM es un conjunto de conceptos y convenciones para implementar políticas d
 
 
 ## Estructuras de datos
-Manifiesto de privilegios
+
+### Manifiesto de privilegios
+```
 {
-	“Privilegio”:[{ “tipo_asignacion”: “identificador”}]
+	"Privilegio":[{ "tipo_asignacion": "identificador"}, ...],
+	...
 }
+```
+
+### Información de sesión de usuario
+
+```
+{
+	"ids":"Identificador (token) de sesión",
+	"uid":"Identificador de usuario",
+	"name":"Nombre del usuario",
+	
+	"propiedad1":"valor propiedad 1",
+	...,
+	
+	"memberships":
+	{
+		"workspaces":["id_workspace1",...],
+		"teams":["id_team1",...],
+		"roles":["id_role1",...]
+	}
+	...
+}
+```
