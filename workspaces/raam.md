@@ -28,6 +28,10 @@ El RAAM es un conjunto de conceptos y convenciones para implementar políticas d
 	...
 }
 ```
+Donde:
+* Privilegio. Es una cadena que identifica (o nombra) un privilegio.
+* tipo_asignación. Es alguna de las cadenas: "user", "role", "team", "workspace" o bien, el nombre de una propiedad esperada en la información de la sesión de usuario.
+* identificador. Es el identificador del tipo de objeto indicado en el tipo de la asignación.
 
 ### Información de sesión de usuario
 
@@ -49,3 +53,12 @@ El RAAM es un conjunto de conceptos y convenciones para implementar políticas d
 	...
 }
 ```
+
+## Autorización
+La autorización a un usuario para efectuar una determinada operación sobre un recurso depende de:
+
+* El recurso no tiene privilegios definidos explícitamente en su manifiesto para la operación dada
+* El usuario está específicamente asignado al privilegio correspondiente
+* El usuario tiene una membresía a un objeto de tipo de asignación explícitamente asociado al privilegio
+* El usuario tiene una propiedad que coincide con un tipo de asignación explícitamente asociado al privilegio
+
