@@ -57,11 +57,20 @@ Donde:
 ## Componentes
 <img src="img/raam-components.svg"/>
 
-### Autorización
-La autorización a un usuario para efectuar una determinada operación sobre un recurso depende de:
+La solicitud de realización de una operación es recibida por la Interfaz del sistema [System Interface] que recaba información del usuario  a través del Proveedor de Identificaciones (Id Provider) y el manifiesto de privilegios por parte del Directorio de recursos [Resource Directory] que son enviados al Controlador de Autorizaciones [Authorization Controller] que determinará si se realiza la solicitud o se deniega.
 
-* El recurso no tiene privilegios definidos explícitamente en su manifiesto para la operación dada
-* El usuario está específicamente asignado al privilegio correspondiente
-* El usuario tiene una membresía a un objeto de tipo de asignación explícitamente asociado al privilegio
-* El usuario tiene una propiedad que coincide con un tipo de asignación explícitamente asociado al privilegio
+* System Interface. Permite la interacción del sistema con el exterior, ya sea una interfaz de usuario (Web o escritorio), servicios Web, etc.
+* Id Provider. Valida la identidad del usuario (a través del par de credenciales usuario y contraseña o bien un identificador 'token' de sesión) y proporciona toda la información de la estructura Información de la sesión de usuario.
+* Resource Directory. Proporciona la información en la estructura de datos del manifiesto de privilegios de un recurso identificable unívocamente.
+* Authorization Controller. Comprueba si la solicitud de operación requiere privilegios y si el usuario los posee para autorizar o denegar su realización.
+
+### Controlador de Autorización
+La lógica interna del Controlador de Autorización es dependiente del sistema y está fuertemente acoplada al mismo, sin embargo se espera funcione concediendo la autorización a un usuario para efectuar una determinada operación sobre un recurso si:
+
+* El usuario está específicamente asignado al privilegio correspondiente o,
+* El usuario tiene una membresía a un objeto de tipo de asignación explícitamente asociado al privilegio o,
+* El usuario tiene una propiedad que coincide con un tipo de asignación explícitamente asociado al privilegio o
+* Se ha definido lógica específica 
+
+
 
