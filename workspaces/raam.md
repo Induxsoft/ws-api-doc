@@ -64,8 +64,8 @@ La solicitud de realización de una operación es recibida por la Interfaz del s
 * Resource Directory. Proporciona la información en la estructura de datos del manifiesto de privilegios de un recurso identificable unívocamente.
 * Authorization Controller. Comprueba si la solicitud de operación requiere privilegios y si el usuario los posee para autorizar o denegar su realización.
 
-### Controlador de Autorización
-La lógica interna del Controlador de Autorización es dependiente del sistema y está fuertemente acoplada al mismo, sin embargo se espera funcione concediendo la autorización a un usuario para efectuar una determinada operación sobre un recurso si:
+### Controlador de Autorizaciones
+La lógica interna del Controlador de Autorizaciones es dependiente del sistema y está fuertemente acoplada al mismo, sin embargo se espera funcione concediendo la autorización a un usuario para efectuar una determinada operación sobre un recurso si:
 
 * El usuario está específicamente asignado al privilegio correspondiente o,
 * El usuario tiene una membresía a un objeto de tipo de asignación explícitamente asociado al privilegio o,
